@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Het Bhadasia — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Het Bhadasia — personal portfolio: projects, skills, contact." />
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed; /* violet */
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-w:1100px;
+      --ff: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background: linear-gradient(180deg,#061124 0%, var(--bg) 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 18px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:20px;
+    }
+    .wrap{width:100%;max-width:var(--max-w)}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 6px 18px rgba(12,12,15,0.6);
+    }
+    h1{margin:0;font-size:22px;letter-spacing:-0.2px}
+    p.lead{color:var(--muted);margin:4px 0 0;font-size:14px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
+
+    /* main card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+
+    /* Hero */
+    .hero{display:flex;gap:18px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;background:linear-gradient(180deg,#0ea5a4,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:36px;color:white;box-shadow:0 8px 30px rgba(124,58,237,0.15)}
+    .intro h2{margin:0 0 6px;font-size:20px}
+    .intro p{margin:0;color:var(--muted)}
+
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .badge{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
+
+    /* Projects */
+    .projects{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin:0 0 6px;font-size:15px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    .project .meta{margin-top:8px;display:flex;justify-content:space-between;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent),#06b6d4);padding:8px 12px;border-radius:10px;color:white;font-weight:700;border:none;cursor:pointer}
+
+    /* sidebar */
+    aside .card{position:sticky;top:28px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--muted);font-size:13px}
+    .contact-form{display:flex;flex-direction:column;gap:10px}
+    input[type="text"],input[type="email"],textarea{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:10px;border-radius:8px;color:inherit;outline:none}
+    textarea{min-height:110px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:960px){
+      .grid{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      .avatar{width:96px;height:96px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">HB</div>
+        <div>
+          <h1>Het Bhadasia</h1>
+          <p class="lead">Student • Web Developer • Researcher</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="hero">
+          <div class="avatar">HB</div>
+          <div class="intro">
+            <h2>Hello — I'm Het.</h2>
+            <p>I'm a student and developer who builds web projects, studies cryptography and system design, and loves learning new technologies. I make clean, responsive web apps and prototypes.</p>
+            <div class="badges">
+              <span class="badge">Open to Internship</span>
+              <span class="badge">HTML • CSS • JS</span>
+              <span class="badge">Python • C</span>
+            </div>
+          </div>
+        </div>
+
+        <section id="about" style="margin-top:18px">
+          <h3 style="margin:0 0 8px">About me</h3>
+          <p style="color:var(--muted);margin:0;font-size:14px">I enjoy turning ideas into working products. Currently studying computer science topics including operating systems, cryptography and web development. I'm available for internships and small freelance projects.</p>
+
+          <div style="display:flex;gap:12px;margin-top:14px;align-items:center">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn" href="#contact" style="background:transparent;border:1px solid rgba(255,255,255,0.06)">Let's talk</a>
+          </div>
+        </section>
+
+        <section id="projects" style="margin-top:18px">
+          <h3 style="margin:0 0 12px">Selected projects</h3>
+          <div class="projects">
+            <article class="project">
+              <h3>Anti-Money Laundering System (Blockchain)</h3>
+              <p>Research & prototype using blockchain for AML compliance and immutable audit trails.</p>
+              <div class="meta">
+                <small style="color:var(--muted)">Tech: Solidity, Web3.js, React</small>
+                <button class="btn" onclick="openProject('https://example.com')">Demo</button>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>Smart Allocation Engine</h3>
+              <p>AI-powered allocation engine for internship placements (prototype and PPT for hackathon).</p>
+              <div class="meta">
+                <small style="color:var(--muted)">Tech: Python, Flask, sklearn</small>
+                <button class="btn" onclick="openProject('https://example.com')">Details</button>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>SSL Troubleshooter</h3>
+              <p>Tool and guide to fix common SSL certificate issues and verification errors.</p>
+              <div class="meta">
+                <small style="color:var(--muted)">Tech: Node.js, Express</small>
+                <button class="btn" onclick="openProject('https://example.com')">Read</button>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>College Project Hub</h3>
+              <p>Management portal for project submissions, grading, and version control for students and teachers.</p>
+              <div class="meta">
+                <small style="color:var(--muted)">Tech: Django, PostgreSQL</small>
+                <button class="btn" onclick="openProject('https://example.com')">Open</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section style="margin-top:18px">
+          <h3 style="margin:0 0 8px">Experience & Education</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Student — Bachelor (ongoing)</li>
+            <li>Hackathon participant — multiple projects</li>
+            <li>Research work in blockchain and security</li>
+          </ul>
+        </section>
+
+        <footer>
+          <small>Made with ❤️ • Last updated: Sep 26, 2025</small>
+        </footer>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin:0 0 10px">Skills</h3>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">C</span>
+            <span class="skill">Blockchain</span>
+            <span class="skill">React</span>
+            <span class="skill">Django</span>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+
+          <h3 style="margin:0 0 10px">Contact</h3>
+          <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your name" required />
+            <input type="email" id="email" placeholder="Your email" required />
+            <textarea id="message" placeholder="Message + project link (optional)" required></textarea>
+            <button type="submit" class="btn">Send message</button>
+          </form>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a href="#" onclick="downloadResume()" class="btn" style="text-align:center">Download Resume</a>
+            <a href="mailto:het@example.com" class="badge" style="text-align:center">het@example.com</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    function openProject(url){
+      // replace with real project links
+      window.open(url,'_blank');
+    }
+
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Please fill all fields.');
+        return;
+      }
+      // Simple demo: open user's mail client with prefilled content
+      const subject = encodeURIComponent('Portfolio message from ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + '\n' + email);
+      window.location.href = `mailto:het@example.com?subject=${subject}&body=${body}`;
+    }
+
+    function downloadResume(){
+      // In production: point to your resume PDF file
+      alert('Resume download placeholder — replace downloadResume() to link to your real resume.');
+    }
+  </script>
+</body>
+</html>
